@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  Margin: 2%;
+  
+}
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  text-align: center;
+  margin: 15px
+}
+ul {
+  text-align: left
+}
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin: 5px
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: white;
+  text-align: center;
+  margin: 5px
+}
+.section {
+  background-color: black;
+  margin: 1px;
+  border: black;
+  
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 2%;
+  background-color: #f1f1f1;
+  
+}
+
+/* Left and right column */
+.column.side {
+  width: 24%;
+  Margin: 2%;
+  content: initial;
+  text-align: center
+}
+
+
+/* Middle column */
+.column.middle {
+  width: 40%;
+  Margin: 2%;
+  content: initial;
+  text-align: center;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  Margin: 2%;
+ 
+}
+.footer {
+  background-color: #F1F1F1;
+  text-align: center; 
+  padding: 10px;
+  margin: 2%;
+ 
+}
+
+#article-1{
+  background-color: white;
+  margin: 5px;
+  height: 90px;
+  text-align: center
+}
+
+#article-2{
+  background-color: white;
+  margin: 5px;
+  height: 90px;
+  text-align: center
+ 
+}
+#article-3{
+  background-color: white;
+  margin: 5px;
+  height: 90px;
+  text-align: center
+  
+}
+
+.clearfix::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+  
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Header</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
+
+<div class="topnav">
+    <h3>Navigate</h3>
+   
+  </div>
+  
+
+<div class="row clearfix" >
+  <div class="column side">
+    <h2>Side</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in. </p>
+  </div>
+  
+  <div class="column middle">
+
+    <h2>Main Content</h2>
+    <section id="article-1">
+      <h3>Article</h3>
+    <ul>
+      <li>argument1</li>
+      <li>argument2</li>
+    </ul>
+    </section>
+    <section id="article-2">
+        <h3>Article</h3>
+        <ul>
+          <li>argument1</li>
+          <li>argument2</li>
+        </ul>
+      </section>
+    <section id="article-3">
+        <h3>Article</h3>
+        <ul>
+          <li>argument1</li>
+          <li>argument2</li>
+        </ul>
+        </section>
+
+  </div>
+  
+  <div class="column side">
+    <h2>Side</h2>
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in.</p>
+  </div>
+</div>
+  
+<div class="footer">
+  <p><h2 id="footer-text">Bottom</h2></p>
+</div>
+
+
+</body>
+</html>
